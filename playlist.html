@@ -23,28 +23,16 @@
 
   <div id="jwplayer"></div>
 
-  <!-- Cloud-hosted player JS -->
+  <!-- JW Cloud Player JS -->
   <script src="https://cdn.jwplayer.com/libraries/g10J45hQ.js"></script>
 
   <script>
     jwplayer("jwplayer").setup({
-      playlist: [
-        {
-          file: "https://cdn.jwplayer.com/v2/playlists/ggldKKlQ"
-        }
-      ],
-
+      playlist: "https://cdn.jwplayer.com/v2/playlists/ggldKKlQ",
       width: "100%",
       height: "100%",
-
-      playlist: {
-        layout: "vertical",
-        size: 320
-      },
-
       autostart: false
     });
   </script>
-
 </body>
 </html>
