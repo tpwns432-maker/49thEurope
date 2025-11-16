@@ -20,29 +20,31 @@
   </style>
 </head>
 <body>
+
   <div id="jwplayer"></div>
 
-  <!-- 1) 여기에는 Cloud-hosted player library URL을 넣어줘 -->
+  <!-- Cloud-hosted player JS -->
   <script src="https://cdn.jwplayer.com/libraries/g10J45hQ.js"></script>
 
   <script>
     jwplayer("jwplayer").setup({
-      // 2) 여기에는 플레이리스트 API 주소를 넣어줘
-      playlist: "https://cdn.jwplayer.com/v2/playlists/ggldKKlQ",
+      playlist: [
+        {
+          file: "https://cdn.jwplayer.com/v2/playlists/ggldKKlQ"
+        }
+      ],
 
       width: "100%",
       height: "100%",
 
-      // 재생목록 UI 항상 펼쳐진 상태
       playlist: {
-        layout: "vertical",   // 오른쪽에 세로 리스트. 아래쪽에 두고 싶으면 "horizontal"
-        size: 320             // 재생목록 너비(px)
+        layout: "vertical",
+        size: 320
       },
 
-      // 필요에 따라 옵션
       autostart: false
     });
   </script>
+
 </body>
 </html>
-
