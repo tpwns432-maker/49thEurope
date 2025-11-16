@@ -10,29 +10,24 @@
       padding: 0;
       height: 100%;
       background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    #jwplayer {
+    #jw-wrapper {
       width: 100%;
-      height: 100vh;
       max-width: 1200px;
-      margin: 0 auto;
     }
   </style>
 </head>
 <body>
+  <div id="jw-wrapper">
+    <!-- 이 div 안쪽에 JW가 자동으로 플레이어를 만들어 넣는다 -->
+    <div id="jwplayer"></div>
+  </div>
 
-  <div id="jwplayer"></div>
-
-  <!-- Cloud Player JS -->
-  <script src="https://cdn.jwplayer.com/libraries/g10J45hQ.js"></script>
-
-  <script>
-    jwplayer("jwplayer").setup({
-      playlist: "https://cdn.jwplayer.com/v2/playlists/ggldKKlQ",
-      width: "100%",
-      height: "100%",
-      autostart: false
-    });
-  </script>
+  <!-- ✅ 여기가 핵심: 호스티드 플레이어 JS만 가져오기 -->
+  <script src="https://cdn.jwplayer.com/players/ggldKKlQ-PLAYER_ID.js"></script>
+  <!-- ↑ PLAYER_ID 부분을 대시보드에 있는 실제 Player ID로 바꿔 넣기 -->
 </body>
 </html>
